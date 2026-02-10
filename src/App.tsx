@@ -1,10 +1,8 @@
-import { Route, Routes } from "react-router";
-import Home from "./pages/Home";
+import Layout from './layouts/Layout'
 
-export default function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes>
-  )
+function App() {
+  console.log('Render App')
+  return <Layout />
 }
+
+export default App
