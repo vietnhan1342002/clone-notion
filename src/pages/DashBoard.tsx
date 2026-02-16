@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 // import TaskCounter from '../components/TaskCounter'
 import TaskList from '../components/TaskList'
 
@@ -17,6 +17,10 @@ export default function Dashboard() {
   console.log('reder dashboard')
 
   const [tasks, setTasks] = useState<Item[]>(initialTasks)
+  useEffect(() => {
+    setTasks(tasks)
+    console.log('in useEffect: ', tasks)
+  }, [tasks])
   // const increase = () => {
   //   setTaskCount(taskCount + 1)
   // }
